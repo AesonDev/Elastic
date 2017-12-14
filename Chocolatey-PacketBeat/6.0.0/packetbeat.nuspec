@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>packetbeat</id>
+    <version>6.0.0</version>
+    <title>packetbeat</title>
+    <authors>Gaetan Jaminon</authors>
+    <owners>Gaetan Jaminon</owners>
+    <projectUrl>https://www.elastic.co/downloads/beats/packetbeat</projectUrl>
+    <iconUrl>https://static-www.elastic.co/assets/blte7cbba7c3e9cbd3d/icon-packetbeat-bb.svg?q=350</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Packetbeat is a real-time network packet analyzer that you can use with Elasticsearch to provide an application monitoring and performance analytics system. Packetbeat completes the Beats platform by providing visibility between the servers of your network.</description>
+    <summary>Packetbeat is an open source shipper for real-time network packet analyzer</summary>
+    <releaseNotes />
+    <copyright />
+    <tags>packetbeat beat elastic admin</tags>
+    <projectSourceUrl>https://github.com/elastic/beats/tree/5.6/packetbeat</projectSourceUrl>
+    <packageSourceUrl>https://github.com/palethorper/chocolatey-packages/tree/master/automatic/packetbeat</packageSourceUrl>
+    <docsUrl>https://www.elastic.co/guide/en/beats/packetbeat/5.6/index.html</docsUrl>
+    <dependencies>
+      <dependency id="WinPcap" />
+    </dependencies>
+  </metadata>
+</package>

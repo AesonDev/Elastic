@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>filebeat</id>
+    <version>6.0.0</version>
+    <title>filebeat</title>
+    <authors>Robert Palethorpe, William Tsoi</authors>
+    <owners>Gaetan Jaminon</owners>
+    <licenseUrl>https://cdn.rawgit.com/palethorper/chocolatey-packages/f264aca5/automatic/filebeat/LICENSE</licenseUrl>
+    <projectUrl>https://www.elastic.co/downloads/beats/filebeat</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/palethorper/chocolatey-packages/f264aca5/automatic/filebeat/icons/filebeat.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Filebeat is a lightweight, open source shipper for log file data. As the next-generation Logstash Forwarder, Filebeat tails logs and quickly sends this information to Logstash for further parsing and enrichment or to Elasticsearch for centralized storage and analysis.</description>
+    <summary>Filebeat is a lightweight, open source shipper for log file data.</summary>
+    <releaseNotes />
+    <copyright />
+    <tags>filebeat beat elastic admin</tags>
+    <projectSourceUrl>https://github.com/elastic/beats/tree/5.6/filebeat</projectSourceUrl>
+    <packageSourceUrl>https://github.com/palethorper/chocolatey-packages/tree/master/automatic/filebeat</packageSourceUrl>
+    <docsUrl>https://www.elastic.co/guide/en/beats/filebeat/5.6/index.html</docsUrl>
+  </metadata>
+</package>
