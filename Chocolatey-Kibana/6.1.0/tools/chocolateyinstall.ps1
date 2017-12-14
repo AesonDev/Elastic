@@ -1,28 +1,24 @@
-﻿$ErrorActionPreference = 'Stop'
-
-$PackageName = 'kibana'
-$url32       = 'http://proget/endpoints/Installer/content/Kibana/kibana-6.1.0-windows-x86_64.zip'
-$checksum32  = '3B204BF43667E1DC0AB17EFDF706235ECF712544602B43B30E4061C2FC725FA4'
-
-$packageArgs = @{
-  packageName    = $packageName
-  url            = $url32
-  checksum       = $checksum32
-  checksumType   = 'sha256'
-  unzipLocation  = 'E:\Programs\Elastic\Kibana'
+﻿$url  = 'http://proget/endpoints/Installer/content/Kibana/kibana-6.1.0-windows-x86_64.zip'
+$basePath = "E:\Programs\Elastic\Kibana"
+$exist = Test-Path $basePath
+if ($exist -eq $false) {
+    New-Item -ItemType Directory -Path $basePath 
 }
-Install-ChocolateyZipPackage @packageArgs
-
-$ServiceName = 'kibana'
-
-Write-Host "Installing service"
-
-if ($Service = Get-Service $ServiceName -ErrorAction SilentlyContinue) {
+$zipPath = "$basePath\Kibana6.1.0.zip"
+Invoke-WebRequest -Uri $url -OutFile $zipPath 
+Write-Output "Unzipping node_module is big)"
+Expand-Archive -Path $zipPath -DestinationPath "$basePath" -Force
+Remove-Item $zipPath -Force
+$originFolder = Get-ChildItem $basePath
+Rename-Item -Path $originFolder.FullName -NewName "Kibana"
+if ($Service = Get-Service "Kibana" -ErrorAction SilentlyContinue) {
     if ($Service.Status -eq "Running") {
-        Start-ChocolateyProcessAsAdmin "stop $ServiceName" "sc.exe"
-    }
-    Start-ChocolateyProcessAsAdmin "delete $ServiceName" "sc.exe"
-}
+        Stop-Service Kibana
+    }  
+    #Using Carbon PS Module 
+    Remove-Service kibana -Verbose
 
-Invoke-Expression "nssm install kibana 'e:\Programs\Elastic\Kibana\kibana-6.1.0-windows-x86_64\bin\kibana.bat'"
-Start-Service kibana
+}
+Invoke-Expression "nssm install kibana 'e:\Programs\Elastic\kibana\bin\kibana.bat'"
+Start-Service Kibana
+

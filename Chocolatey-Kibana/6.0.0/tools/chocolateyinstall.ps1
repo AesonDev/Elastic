@@ -9,7 +9,7 @@ $packageArgs = @{
   url            = $url32
   checksum       = $checksum32
   checksumType   = 'sha256'
-  unzipLocation  = 'E:\Programs\Elastic\Kibana\'
+  unzipLocation  = 'E:\Programs\Elastic\Kibana\6.0.0\'
 }
 Install-ChocolateyZipPackage @packageArgs
 
