@@ -1,11 +1,11 @@
 $installPath = "E:\Programs\Elastic\ElasticSearch"
-$packageArgs = @{
+packageArgs = @{
     packageName            = 'elasticsearch'
     fileType               = 'MSI'
-    url                    = 'http://proget/endpoints/Installer/content/ElasticSearch/elasticsearch-6.0.0.msi'
-    url64bit               = 'http://proget/endpoints/Installer/content/ElasticSearch/elasticsearch-6.0.0.msi'
-    checksum               = 'CF18522ED4F81DE10E21E198632D25A6D1673F05B966F508730C5B0860054A26'
-    checksum64             = 'CF18522ED4F81DE10E21E198632D25A6D1673F05B966F508730C5B0860054A26'
+    url                    = 'http://proget/endpoints/Installer/content/ElasticSearch/elasticsearch-6.1.0.msi'
+    url64bit               = 'http://proget/endpoints/Installer/content/ElasticSearch/elasticsearch-6.1.0.msi'
+    checksum               = '916B9479237FFF9F522A3528DD45BC43F5B50D9B6215D1B149C012FAF902C94C'
+    checksum64             = '916B9479237FFF9F522A3528DD45BC43F5B50D9B6215D1B149C012FAF902C94C'
     checksumType           = 'sha256'
     checksumType64         = 'sha256'
     silentArgs             = "/quiet INSTALLDIR=$installPath DATADIRECTORY=$installPath\Data CONFIGDIRECTORY=$installPath\Config LOGSDIRECTORY=$installPath\Logs /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""

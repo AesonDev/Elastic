@@ -1,15 +1,15 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'kibana'
-$url32       = 'http://proget/endpoints/Installer/content/Kibana/kibana-6.0.0-windows-x86_64.zip'
-$checksum32  = '31B9A0F9C8942DD43752B1A9F69907B39E47A994E3DFCA9F68D02F628B73F818'
+$url32       = 'http://proget/endpoints/Installer/content/Kibana/kibana-6.1.0-windows-x86_64.zip'
+$checksum32  = '3B204BF43667E1DC0AB17EFDF706235ECF712544602B43B30E4061C2FC725FA4'
 
 $packageArgs = @{
   packageName    = $packageName
   url            = $url32
   checksum       = $checksum32
   checksumType   = 'sha256'
-  unzipLocation  = 'E:\Programs\Elastic\Kibana\'
+  unzipLocation  = 'E:\Programs\Elastic\Kibana'
 }
 Install-ChocolateyZipPackage @packageArgs
 
@@ -24,5 +24,5 @@ if ($Service = Get-Service $ServiceName -ErrorAction SilentlyContinue) {
     Start-ChocolateyProcessAsAdmin "delete $ServiceName" "sc.exe"
 }
 
-Invoke-Expression "nssm install kibana 'C:\Program Files\Elastic\Kibana\kibana-6.0.0-windows-x86_64\bin\kibana.bat'"
+Invoke-Expression "nssm install kibana 'e:\Programs\Elastic\Kibana\kibana-6.1.0-windows-x86_64\bin\kibana.bat'"
 Start-Service kibana

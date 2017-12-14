@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>elasticsearch</id>
+    <version>6.1.0</version>
+    <title>Elasticsearch</title>
+    <authors>https://github.com/elasticsearch/elasticsearch/contributors</authors>
+    <owners>Gaetan Jaminon</owners>
+    <licenseUrl>https://github.com/elasticsearch/elasticsearch/blob/v5.6.0/LICENSE.txt</licenseUrl>
+    <projectUrl>https://www.elastic.co/products/elasticsearch</projectUrl>
+    <iconUrl>http://s10.postimg.org/41mrwi0ed/elasticsearch_logo_64x64.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Distributed, scalable, real-time search and analytics engine.</description>
+    <summary>Distributed, scalable, real-time search and analytics engine.</summary>
+    <releaseNotes>https://www.elastic.co/guide/en/elasticsearch/reference/5.6/release-notes-5.6.0.html</releaseNotes>
+    <tags>search REST analytics metrics</tags>
+    <projectSourceUrl>https://github.com/elastic/elasticsearch</projectSourceUrl>
+    <packageSourceUrl>https://github.com/elastic/chocolatey-elasticsearch</packageSourceUrl>
+    <docsUrl>https://www.elastic.co/guide/en/elasticsearch/reference/5.6/index.html</docsUrl>
+    <mailingListUrl>https://www.elastic.co/community</mailingListUrl>
+    <bugTrackerUrl>https://github.com/elastic/elasticsearch/issues</bugTrackerUrl>
+    <dependencies>
+      <dependency id="server-jre" version="8.0.0" />
+    </dependencies>
+  </metadata>
+</package>
